@@ -33,7 +33,10 @@ app.use('/chat', chatRoutes)
 app.use('/message', messageRoutes)
 SocketServer(httpServer);
 dbconnect();
-httpServer.listen(port, ()=>{
-     console.log('server started on',port);
+app.get('/', (req, res) => {
+     res.status(200).send('ok from server')
+})
+httpServer.listen(port, () => {
+     console.log('server started on', port);
 })
 
