@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(morgan('common'))
 app.use(cookieParser())
 app.use(cors({
-     origin: process.env.CLIENT_URL,
+     origin: process.env.PRODUCTION,
      credentials: true
 }))
 
